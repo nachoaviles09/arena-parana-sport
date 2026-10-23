@@ -1,5 +1,3 @@
-const WHATSAPP_NUMBER = '5493434717233';
-
 // Data con íconos vectoriales SVG ultra limpios
 const sportsData = [
   {
@@ -87,10 +85,10 @@ function generateReservation(event) {
     time: time
   };
 
-  // URL generada por Google Apps Script
+  // URL de tu Google Apps Script
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyDCw2Isc40DknZOH8Zla2EJAfR21Sb1S84XwKs9b-LcNCbk2LTOTDImMGu52L9KPM2/exec';
 
-  // Enviar datos a Google Sheets en segundo plano
+  // Enviar datos a Google Sheets
   fetch(scriptURL, {
     method: 'POST',
     mode: 'no-cors',
@@ -98,7 +96,7 @@ function generateReservation(event) {
     body: JSON.stringify(reservationData)
   }).catch(error => console.error('Error al registrar en la base de datos:', error));
 
-  // Mensaje de WhatsApp simplificado (Sin mención de señas)
+  // Mensaje de WhatsApp estructurado
   const refCode = 'APS-' + Math.floor(1000 + Math.random() * 9000);
   
   let message = `🏟️ *SOLICITUD DE TURNO #${refCode}*\n`;
@@ -111,7 +109,8 @@ function generateReservation(event) {
   message += `👤 *Responsable:* ${name}\n\n`;
   message += `_¡Hola! Envío mi solicitud de reserva para consultar disponibilidad y confirmar el turno._`;
 
-  const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
+  const phoneNumber = '5493436131681'; 
+  const waUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   window.open(waUrl, '_blank');
 }
