@@ -8,16 +8,16 @@
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/jpeg" href="813021210_18113448151858751_1309644951589697854_n.jpg">
 
-  <!-- Google Fonts: Montserrat & Inter -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header Fijo e Inteligente -->
   <header class="header">
     <div class="header-container">
       <div class="brand">
@@ -28,48 +28,61 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="#multimedia">Instalaciones</a>
-        <a href="#precios">Tarifas</a>
-        <a href="#agenda">Agenda</a>
+        <a href="#multimedia" class="nav-item">Instalaciones</a>
+        <a href="#precios" class="nav-item">Tarifas</a>
+        <a href="#agenda" class="nav-item">Agenda</a>
         <a href="#reservas" class="nav-btn">Reservar Turno</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-content reveal">
       <span class="badge">INFRAESTRUCTURA DE ÚLTIMA GENERACIÓN</span>
       <h2>EL NUEVO ESTÁNDAR DEPORTIVO DE LA REGIÓN</h2>
       <p>Canchas, iluminación, tribunas, piso deportivo y terminaciones pensadas para que cada partido sea una experiencia de elite.</p>
       <div class="hero-buttons">
-        <a href="#reservas" class="btn-main">RESERVAR ONLINE</a>
-        <a href="#multimedia" class="btn-sub">VER RECORRIDO</a>
+        <a href="#reservas" class="btn-main">
+          <svg viewBox="0 0 24 24" class="btn-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-2h4v2zm4-4H7v-2h8v2zm0-4H7V7h8v2z"/></svg> RESERVAR ONLINE
+        </a>
+        <a href="#multimedia" class="btn-sub">
+          <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg> VER RECORRIDO
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Info Bar -->
-  <section class="info-bar">
+  <!-- Info Bar (Con íconos SVG corporativos) -->
+  <section class="info-bar reveal">
     <div class="info-container">
-      <div>📍 <strong>Ubicación:</strong> Juan Morath 10 (Esq. Almafuerte), Paraná</div>
-      <div>🕒 <strong>Horarios:</strong> Lun a Dom de 08:00 a 00:00 hs</div>
-      <div>📞 <strong>Atención:</strong> Canales Oficiales</div>
+      <div class="info-box">
+        <svg viewBox="0 0 24 24" class="icon-svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span><strong>Ubicación:</strong> Juan Morath 10 (Esq. Almafuerte), Paraná</span>
+      </div>
+      <div class="info-box">
+        <svg viewBox="0 0 24 24" class="icon-svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span><strong>Horarios:</strong> Lun a Dom de 08:00 a 00:00 hs</span>
+      </div>
+      <div class="info-box">
+        <svg viewBox="0 0 24 24" class="icon-svg"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.75 0 .99-.65.99-1.19v-3.44c0-.54-.45-.99-.99-.99z"/></svg>
+        <span><strong>Atención:</strong> Canales Oficiales</span>
+      </div>
     </div>
   </section>
 
   <main class="container">
 
     <!-- SECCIÓN: Multimedia -->
-    <section class="section" id="multimedia">
-      <div class="section-title">
+    <section class="section scrollspy-target" id="multimedia">
+      <div class="section-title reveal">
         <span class="tag">EXPERIENCIA VISUAL</span>
         <h3>RECORRIDO POR EL COMPLEJO</h3>
         <p>Conocé el nivel de infraestructura, vestuarios y cancha principal.</p>
       </div>
 
       <div class="grid-2">
-        <div class="card glass-effect">
+        <div class="card glass-effect reveal delay-1">
           <div class="video-box">
             <video autoplay muted loop playsinline preload="auto">
               <source src="igexport-Dd3uJvZRFdY.mp4" type="video/mp4">
@@ -81,7 +94,7 @@
           </div>
         </div>
 
-        <div class="card glass-effect">
+        <div class="card glass-effect reveal delay-2">
           <div class="video-box">
             <video autoplay muted loop playsinline preload="auto">
               <source src="igexport-Dd9oF_IStvF.mp4" type="video/mp4">
@@ -96,15 +109,15 @@
     </section>
 
     <!-- SECCIÓN: Precios -->
-    <section class="section" id="precios">
-      <div class="section-title">
+    <section class="section scrollspy-target" id="precios">
+      <div class="section-title reveal">
         <span class="tag">INVERSIÓN Y TARIFAS</span>
         <h3>PRECIOS DE LANZAMIENTO</h3>
-        <p>Elegí la modalidad perfecta para entrenar o competir en Futsal, Básquet o Vóley.</p>
+        <p>Elegí la modalidad perfecta para entrenar o competir al máximo nivel.</p>
       </div>
 
       <div class="grid-2">
-        <div class="price-card highlight glass-effect">
+        <div class="price-card highlight glass-effect reveal delay-1">
           <span class="price-badge">MÁS ELEGIDO</span>
           <div>
             <h4>Gimnasio Completo</h4>
@@ -116,7 +129,7 @@
           </div>
         </div>
 
-        <div class="price-card glass-effect">
+        <div class="price-card glass-effect reveal delay-2">
           <div>
             <h4>Gimnasio Parcial</h4>
             <p>Modalidad específica disponible para prácticas y partidos de Básquet y Vóley.</p>
@@ -130,15 +143,15 @@
     </section>
 
     <!-- SECCIÓN: Agenda -->
-    <section class="section" id="agenda">
-      <div class="section-title">
+    <section class="section scrollspy-target" id="agenda">
+      <div class="section-title reveal">
         <span class="tag">DISPONIBILIDAD SEMANAL</span>
         <h3>AGENDA DE TURNOS LIBRES</h3>
         <p>Espacios disponibles para Básquet y Vóley en Cancha 1 y Cancha 2 (Valor único: $40.000).</p>
       </div>
 
       <div class="agenda-grid">
-        <div class="agenda-card glass-effect">
+        <div class="agenda-card glass-effect reveal delay-1">
           <h4>LUNES</h4>
           <ul>
             <li><span>14 a 18 hs</span> Cancha 1</li>
@@ -147,25 +160,25 @@
             <li><span>22 a 23 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card glass-effect">
+        <div class="agenda-card glass-effect reveal delay-2">
           <h4>MARTES</h4>
           <ul>
             <li><span>14 a 19 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card glass-effect">
+        <div class="agenda-card glass-effect reveal delay-3">
           <h4>MIÉRCOLES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 1 y 2</li>
           </ul>
         </div>
-        <div class="agenda-card glass-effect">
+        <div class="agenda-card glass-effect reveal delay-4">
           <h4>JUEVES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card glass-effect">
+        <div class="agenda-card glass-effect reveal delay-5">
           <h4>VIERNES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 2</li>
@@ -176,7 +189,7 @@
     </section>
 
     <!-- SECCIÓN: Deportes -->
-    <section class="section" id="instalaciones">
+    <section class="section reveal" id="instalaciones">
       <div class="section-title">
         <span class="tag">DISCIPLINAS OFICIALES</span>
         <h3>DEPORTES HABILITADOS</h3>
@@ -184,12 +197,12 @@
       </div>
 
       <div class="grid-3" id="sports-grid-container">
-        <!-- Generado por JS -->
+        <!-- Generado por JS con iconos vectoriales -->
       </div>
     </section>
 
     <!-- SECCIÓN: Reservas -->
-    <section class="section reservation-section glass-effect" id="reservas">
+    <section class="section reservation-section glass-effect scrollspy-target reveal" id="reservas">
       <div class="section-title">
         <span class="tag">GESTIÓN ONLINE</span>
         <h3>SISTEMA DE RESERVAS EJECUTIVO</h3>
@@ -198,16 +211,16 @@
 
       <form id="reservation-form" onsubmit="generateReservation(event)" class="form">
         <div class="form-grid">
-          <div class="field">
+          <div class="field focus-effect">
             <label>Disciplina Deportiva *</label>
             <select id="res-sport" required>
-              <option value="Futsal Profesional">Futsal Profesional ⚽</option>
-              <option value="Básquet Oficial">Básquet Oficial 🏀</option>
-              <option value="Vóley Reglamentario">Vóley Reglamentario 🏐</option>
+              <option value="Futsal Profesional">Futsal Profesional</option>
+              <option value="Básquet Oficial">Básquet Oficial</option>
+              <option value="Vóley Reglamentario">Vóley Reglamentario</option>
             </select>
           </div>
 
-          <div class="field">
+          <div class="field focus-effect">
             <label>Cancha / Espacio *</label>
             <select id="res-court" required>
               <option value="Cancha Principal / Completa">Cancha Principal / Completa</option>
@@ -216,7 +229,7 @@
             </select>
           </div>
 
-          <div class="field">
+          <div class="field focus-effect">
             <label>Modalidad de Tarifa *</label>
             <select id="res-modality" required>
               <option value="Gimnasio Completo ($80.000)">Gimnasio Completo - $80.000</option>
@@ -225,12 +238,12 @@
             </select>
           </div>
 
-          <div class="field">
+          <div class="field focus-effect">
             <label>Fecha del Turno *</label>
             <input type="date" id="res-date" required>
           </div>
 
-          <div class="field">
+          <div class="field focus-effect">
             <label>Horario Solicitado *</label>
             <select id="res-time" required>
               <option value="14:00 a 18:00 hs">14:00 a 18:00 hs</option>
@@ -241,25 +254,27 @@
             </select>
           </div>
 
-          <div class="field">
+          <div class="field focus-effect">
             <label>Nombre y Apellido (Responsable) *</label>
             <input type="text" id="res-name" placeholder="Ej: Lic. Martín Gómez" required>
           </div>
         </div>
 
-        <button type="submit" class="btn-submit">GENERAR SOLICITUD POR WHATSAPP ⚡</button>
+        <button type="submit" class="btn-submit">
+          GENERAR SOLICITUD POR WHATSAPP
+          <svg viewBox="0 0 24 24" class="btn-icon" style="margin-left: 8px;"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+        </button>
       </form>
     </section>
 
     <!-- SECCIÓN: Ubicación y Mapa Interactivo -->
-    <section class="section location-section glass-effect" id="ubicacion">
+    <section class="section location-section glass-effect reveal delay-1" id="ubicacion">
       <div class="section-title">
         <span class="tag">CÓMO LLEGAR</span>
         <h3>NUESTRA UBICACIÓN</h3>
         <p>📍 Juan Morath 10 (Esq. Almafuerte), Paraná, Entre Ríos.</p>
       </div>
       <div class="map-container">
-        <!-- Mapa incrustado centrado en la esquina de Morath y Almafuerte -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.793740268579!2d-60.50508542340578!3d-31.748530312384767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b4529db7198bb7%3A0x6b44dd3c713b1856!2sJuan%20Morath%2010%2C%20Paran%C3%A1%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
@@ -267,8 +282,8 @@
   </main>
 
   <!-- Botón Flotante de WhatsApp -->
-  <a href="https://wa.me/5493436131681?text=¡Hola!%20Quiero%20consultar%20sobre%20Arena%20Paraná%20Sport%20🏆" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <a href="https://wa.me/5493436131681?text=¡Hola!%20Quiero%20consultar%20sobre%20Arena%20Paraná%20Sport%20🏆" target="_blank" class="whatsapp-float reveal delay-2" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" style="width:34px; height:34px; fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
   </a>
 
   <!-- Footer -->

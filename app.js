@@ -1,35 +1,37 @@
+// Data con íconos vectoriales SVG ultra limpios en lugar de emojis
 const sportsData = [
   {
     id: 'futsal',
     name: 'Futsal Profesional',
-    icon: '⚽',
+    icon: `<svg viewBox="0 0 24 24" class="sport-icon-box"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-4l5-3-5-3v6z"/></svg>`,
     desc: 'Cancha reglamentaria con superficie de alta calidad y excelente rebote.',
     price: 'Completo: $80.000'
   },
   {
     id: 'basquet',
     name: 'Básquet Oficial',
-    icon: '🏀',
+    icon: `<svg viewBox="0 0 24 24" class="sport-icon-box"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.22-.38-.63-.65-1.1-.65h-1v-2c0-.55-.45-1-1-1h-4v-1h3c.55 0 1-.45 1-1v-2h1c1.1 0 2-.9 2-2V7.15c2.28 1.45 3.84 3.93 3.98 6.85-1.57.19-2.92 1.05-3.88 2.4z"/></svg>`,
     desc: 'Piso flotante profesional, aros rebatibles y marcación oficial.',
     price: 'Completo $80k | Parcial $40k'
   },
   {
     id: 'voley',
     name: 'Vóley Reglamentario',
-    icon: '🏐',
+    icon: `<svg viewBox="0 0 24 24" class="sport-icon-box"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>`,
     desc: 'Espacio óptimo con altura libre superior y red profesional ajustable.',
     price: 'Completo $80k | Parcial $40k'
   }
 ];
 
+// 1. Cargar las Tarjetas de Deporte
 function renderSports() {
   const container = document.getElementById('sports-grid-container');
   if (!container) return;
 
-  container.innerHTML = sportsData.map(sport => `
-    <div class="sport-card">
+  container.innerHTML = sportsData.map((sport, index) => `
+    <div class="sport-card glass-effect reveal delay-${index + 1}">
       <div>
-        <div class="sport-icon">${sport.icon}</div>
+        ${sport.icon}
         <h4>${sport.name}</h4>
         <p>${sport.desc}</p>
       </div>
@@ -41,6 +43,7 @@ function renderSports() {
   `).join('');
 }
 
+// 2. Lógica del formulario de reserva
 function selectSportFromCard(sportName) {
   const select = document.getElementById('res-sport');
   if (select) {
@@ -74,7 +77,7 @@ function generateReservation(event) {
 
   let message = `🏟️ *SOLICITUD DE TURNO - ARENA PARANÁ SPORT*\n`;
   message += `📍 _Ubicación: Juan Morath 10, Paraná_\n\n`;
-  message += `⚽ *Disciplina:* ${sport}\n`;
+  message += `🏆 *Disciplina:* ${sport}\n`;
   message += `🏟️ *Cancha:* ${court}\n`;
   message += `💳 *Modalidad:* ${modality}\n`;
   message += `📅 *Fecha:* ${date}\n`;
@@ -88,12 +91,56 @@ function generateReservation(event) {
   window.open(waUrl, '_blank');
 }
 
-// Inicialización
-renderSports();
+// 3. Animación Reveal al scrollear
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
 
-const dateInput = document.getElementById('res-date');
-if (dateInput) {
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.value = today;
-  dateInput.min = today;
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
 }
+
+// 4. Menú Inteligente (Scroll Spy)
+function initScrollSpy() {
+  const sections = document.querySelectorAll('.scrollspy-target');
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current) && current !== '') {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+// Inicialización de todas las funciones
+document.addEventListener('DOMContentLoaded', () => {
+  renderSports();
+  initScrollReveal();
+  initScrollSpy();
+
+  const dateInput = document.getElementById('res-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.value = today;
+    dateInput.min = today;
+  }
+});

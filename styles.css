@@ -29,7 +29,41 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-/* Efecto Cristal (Glassmorphism) */
+/* --- CLASES DE ANIMACIÓN (Scroll Reveal) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Íconos Vectoriales y SVGs */
+.icon-svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Efecto Cristal */
 .glass-effect {
   background: var(--card-bg);
   backdrop-filter: blur(16px);
@@ -45,7 +79,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
   background: rgba(6, 6, 8, 0.85);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
   padding: 16px 20px;
 }
@@ -91,23 +124,38 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
 }
 
+/* Menú Inteligente (Scroll Spy) */
 .nav {
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-.nav a {
+.nav-item {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-.nav a:hover {
-  color: var(--text-main);
-  transform: translateY(-1px);
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: var(--accent);
+}
+.nav-item.active::after {
+  width: 100%;
 }
 
 .nav-btn {
@@ -237,7 +285,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.info-container strong {
+.info-box {
+  display: flex;
+  align-items: center;
+}
+
+.info-box strong {
   color: var(--text-main);
 }
 
@@ -295,12 +348,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Cards & Videos */
 .card, .price-card, .sport-card, .agenda-card, .reservation-section, .location-section {
   border-radius: 20px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover, .price-card:hover, .sport-card:hover, .agenda-card:hover {
   transform: translateY(-5px);
   border-color: rgba(204, 255, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -470,9 +524,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
 }
 
-.sport-icon {
-  font-size: 2.5rem;
+.sport-icon-box {
+  width: 50px;
+  height: 50px;
   margin-bottom: 16px;
+  fill: var(--accent);
 }
 
 .sport-card h4 {
@@ -520,7 +576,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--accent);
 }
 
-/* Reservation */
+/* Reservation & Form Focus Effects */
 .reservation-section {
   padding: 45px;
 }
@@ -536,12 +592,14 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: all 0.3s;
 }
 
 .field label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
+  transition: color 0.3s;
 }
 
 .field input, .field select {
@@ -552,12 +610,20 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.3s;
+  transition: all 0.3s ease;
   font-family: var(--font-text);
 }
 
+/* El efecto didáctico de Glow al tocar un campo */
 .field input:focus, .field select:focus {
   border-color: var(--accent);
+  background: rgba(20, 25, 0, 0.5);
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.field:focus-within label {
+  color: var(--accent);
 }
 
 .btn-submit {
@@ -572,6 +638,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-submit:hover {
@@ -597,7 +666,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   border: 0;
-  /* Este filtro vuelve oscuro el mapa estándar de Google Maps */
   filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(110%);
 }
 
@@ -621,11 +689,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-}
-
-.whatsapp-float img {
-  width: 38px;
-  height: 38px;
 }
 
 @keyframes pulse-wa {
