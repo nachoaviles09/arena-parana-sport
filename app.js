@@ -1,3 +1,5 @@
+const WHATSAPP_NUMBER = '5493434717233';
+
 // Data con íconos vectoriales SVG ultra limpios
 const sportsData = [
   {
@@ -109,8 +111,7 @@ function generateReservation(event) {
   message += `👤 *Responsable:* ${name}\n\n`;
   message += `_¡Hola! Envío mi solicitud de reserva para consultar disponibilidad y confirmar el turno._`;
 
-  const phoneNumber = '5493436131681'; 
-  const waUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+  const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
 
   window.open(waUrl, '_blank');
 }
