@@ -1,4 +1,3 @@
-// Data con íconos vectoriales SVG ultra limpios
 const sportsData = [
   {
     id: 'futsal',
@@ -23,7 +22,6 @@ const sportsData = [
   }
 ];
 
-// 1. Cargar las Tarjetas de Deporte
 function renderSports() {
   const container = document.getElementById('sports-grid-container');
   if (!container) return;
@@ -43,7 +41,6 @@ function renderSports() {
   `).join('');
 }
 
-// 2. Lógica del formulario de reserva
 function selectSportFromCard(sportName) {
   const select = document.getElementById('res-sport');
   if (select) {
@@ -75,7 +72,6 @@ function generateReservation(event) {
     return;
   }
 
-  // Objeto con los datos para la planilla
   const reservationData = {
     name: name,
     sport: sport,
@@ -85,18 +81,16 @@ function generateReservation(event) {
     time: time
   };
 
-  // URL de tu Google Apps Script
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyDCw2Isc40DknZOH8Zla2EJAfR21Sb1S84XwKs9b-LcNCbk2LTOTDImMGu52L9KPM2/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyTT2bsTq2pl1Yw9mh7FPEueK1laCLkMi1FBM4QV2qMKlB-YfWyQJF0tV47Tc0ICrNj/exec';
 
-  // Enviar datos a Google Sheets
+  // Enviar a Google Sheets con encabezado compatible
   fetch(scriptURL, {
     method: 'POST',
     mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(reservationData)
-  }).catch(error => console.error('Error al registrar en la base de datos:', error));
+  }).catch(error => console.error('Error al registrar:', error));
 
-  // Mensaje de WhatsApp estructurado
   const refCode = 'APS-' + Math.floor(1000 + Math.random() * 9000);
   
   let message = `🏟️ *SOLICITUD DE TURNO #${refCode}*\n`;
@@ -109,13 +103,12 @@ function generateReservation(event) {
   message += `👤 *Responsable:* ${name}\n\n`;
   message += `_¡Hola! Envío mi solicitud de reserva para consultar disponibilidad y confirmar el turno._`;
 
-  const phoneNumber = '5493436131681'; 
+  const phoneNumber = '5493434717233'; 
   const waUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   window.open(waUrl, '_blank');
 }
 
-// 3. Animación Reveal al scrollear
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -131,7 +124,6 @@ function initScrollReveal() {
   });
 }
 
-// 4. Menú Inteligente (Scroll Spy)
 function initScrollSpy() {
   const sections = document.querySelectorAll('.scrollspy-target');
   const navLinks = document.querySelectorAll('.nav-item');
@@ -154,7 +146,6 @@ function initScrollSpy() {
   });
 }
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
   renderSports();
   initScrollReveal();
