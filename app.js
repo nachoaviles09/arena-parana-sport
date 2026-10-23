@@ -10,7 +10,7 @@ const sportsData = [
     id: 'basquet',
     name: 'Básquet Oficial',
     icon: '🏀',
-    desc: 'Piso flotante profesional, aros rebatibles y marcación reglamentaria.',
+    desc: 'Piso flotante profesional, aros rebatibles y marcación oficial.',
     price: 'Completo $80k | Parcial $40k'
   },
   {
@@ -61,6 +61,7 @@ function generateReservation(event) {
   event.preventDefault();
 
   const sport = document.getElementById('res-sport').value;
+  const court = document.getElementById('res-court').value;
   const modality = document.getElementById('res-modality').value;
   const date = document.getElementById('res-date').value;
   const time = document.getElementById('res-time').value;
@@ -75,6 +76,7 @@ function generateReservation(event) {
   let message = `🏟️ *SOLICITUD DE TURNO - ARENA PARANÁ SPORT*\n`;
   message += `📍 _Ubicación: Juan Morath 10, Paraná_\n\n`;
   message += `⚽ *Disciplina:* ${sport}\n`;
+  message += `🏟️ *Cancha:* ${court}\n`;
   message += `💳 *Modalidad:* ${modality}\n`;
   message += `📅 *Fecha:* ${date}\n`;
   message += `⏰ *Horario:* ${time}\n`;

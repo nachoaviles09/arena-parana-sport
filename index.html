@@ -3,105 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Arena Paraná Sport | Complejo Deportivo Profesional 🏀⚽🏐</title>
+  <title>Arena Paraná Sport | Complejo Deportivo de Alta Gama 🏀⚽🏐</title>
 
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Arena Paraná Sport | Complejo Deportivo Profesional">
-  <meta property="og:description" content="Instalaciones de primer nivel para Básquet, Vóley y Futsal. Reservá tu turno online. Juan Morath 10, Paraná.">
+  <meta property="og:title" content="Arena Paraná Sport | Complejo Deportivo de Alta Gama">
+  <meta property="og:description" content="Instalaciones de primer nivel en Paraná. Básquet, Vóley y Futsal. Reservas online. Juan Morath 10.">
   <meta property="og:site_name" content="Arena Paraná Sport">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header Institucional -->
+  <!-- Header Ejecutivo -->
   <header class="main-header">
     <div class="header-container">
       <div class="brand-box">
         <span class="brand-tag">PARANÁ // ENTRE RÍOS</span>
         <h1>ARENA PARANÁ <span>SPORT</span></h1>
       </div>
-      <div class="header-badge">
-        <span class="live-dot"></span> Instalaciones Habilitadas
+      <div class="header-actions-top">
+        <a href="#agenda" class="header-link-agenda">📅 Agenda Semanal</a>
+        <div class="header-badge">
+          <span class="live-dot"></span> Abierto Ahora
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section Inmersivo -->
   <section class="hero-section">
     <div class="hero-overlay">
       <div class="hero-content">
-        <span class="hero-badge">INFRAESTRUCTURA DE ÚLTIMA GENERACIÓN</span>
-        <h2>EL NUEVO ESTÁNDAR DEPORTIVO EN LA CIUDAD</h2>
-        <p>Canchas, iluminación, tribunas, piso deportivo, espacios comunes y terminaciones pensadas para que cada experiencia esté a la altura.</p>
+        <span class="hero-badge">EXCLUSIVIDAD Y TECNOLOGÍA APLICADA AL JUEGO</span>
+        <h2>EL NUEVO ESTÁNDAR DEPORTIVO DE LA REGIÓN</h2>
+        <p>Canchas profesionales, iluminación LED sin reflejos, tribunas, piso deportivo de alta gama y espacios comunes diseñados sin concesiones.</p>
         <div class="hero-actions">
           <a href="#reservas" class="btn-primary">RESERVAR TURNO ⚡</a>
-          <a href="#precios" class="btn-secondary">VER TARIFAS 🔥</a>
+          <a href="#agenda" class="btn-secondary">VER AGENDA LIBRE 📅</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Barra de Ubicación e Info -->
+  <!-- Barra de Ubicación e Info Institucional -->
   <section class="info-bar">
     <div class="info-track">
-      <div class="info-item">📍 <strong>Ubicación:</strong> Juan Morath 10 (esq. Almafuerte), Paraná</div>
+      <div class="info-item">📍 <strong>Ubicación:</strong> Juan Morath 10 (Esq. Almafuerte), Paraná</div>
       <div class="info-item">🕒 <strong>Horarios:</strong> Lun a Dom de 08:00 a 00:00 hs</div>
-      <div class="info-item">📞 <strong>Contacto:</strong> Atención Directa por WhatsApp</div>
+      <div class="info-item">📞 <strong>Atención:</strong> Canales Oficiales de Reserva</div>
     </div>
   </section>
 
-  <main class="main-container" id="reservas">
+  <main class="main-container">
     
     <!-- Sección de Precios de Lanzamiento -->
     <section class="section-block" id="precios">
       <div class="section-title">
-        <h3>🔥 PRECIOS DE LANZAMIENTO</h3>
-        <p>Elegí la modalidad que mejor se adapte a tu equipo para Futsal, Básquet o Vóley.</p>
+        <h3>🔥 TARIFAS Y PRECIOS DE LANZAMIENTO</h3>
+        <p>Elegí la modalidad perfecta para entrenar o competir al máximo nivel.</p>
       </div>
 
       <div class="pricing-grid">
         <div class="pricing-card featured">
-          <div class="pricing-tag">MÁS POPULAR</div>
+          <div class="pricing-tag">MÁS ELEGIDO</div>
           <h4>Gimnasio Completo</h4>
-          <p>Elegí una de las tres disciplinas (Futsal, Básquet o Vóley) con uso total del complejo.</p>
-          <div class="price-value">$80.000 <span>el turno</span></div>
-          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Completo ($80.000)')">Elegir Completo</button>
+          <p>Acceso total a una de las tres disciplinas (Futsal, Básquet o Vóley) para todo tu equipo.</p>
+          <div class="price-value">$80.000 <span>/ turno</span></div>
+          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Completo ($80.000)')">Seleccionar Completo</button>
         </div>
 
         <div class="pricing-card">
           <h4>Gimnasio Parcial</h4>
-          <p>Disponible para prácticas o partidos de Básquet y Vóley.</p>
-          <div class="price-value">$40.000 <span>el turno</span></div>
-          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Parcial ($40.000)')">Elegir Parcial</button>
+          <p>Modalidad específica disponible para prácticas de Básquet y Vóley.</p>
+          <div class="price-value">$40.000 <span>/ turno</span></div>
+          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Parcial ($40.000)')">Seleccionar Parcial</button>
         </div>
       </div>
     </section>
 
-    <!-- Sección de Disciplinas / Instalaciones -->
-    <section class="section-block" id="instalaciones">
+    <!-- Módulo de Agenda de Turnos Libres (Basado en la cartelera oficial) -->
+    <section class="section-block" id="agenda">
       <div class="section-title">
-        <h3>DISCIPLINAS Y CANCHAS 🏆</h3>
-        <p>Instalaciones de máxima categoría preparadas para competencias y entrenamientos.</p>
+        <h3>📅 AGENDA DE TURNOS LIBRES // PRÓXIMA SEMANA</h3>
+        <p>Consultá los espacios disponibles para Básquet y Vóley en Cancha 1 y Cancha 2.</p>
       </div>
 
-      <div class="sports-grid" id="sports-grid-container">
-        <!-- Generado dinámicamente desde JS -->
+      <div class="agenda-grid">
+        <div class="agenda-day-card">
+          <h4>LUNES</h4>
+          <ul>
+            <li><span>14 a 18 hs</span> Básquet / Vóley <strong>(Cancha 1)</strong></li>
+            <li><span>22 a 23 hs</span> Básquet / Vóley <strong>(Cancha 1)</strong></li>
+            <li><span>14 a 20 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+            <li><span>22 a 23 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+          </ul>
+        </div>
+        <div class="agenda-day-card">
+          <h4>MARTES</h4>
+          <ul>
+            <li><span>14 a 19 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+          </ul>
+        </div>
+        <div class="agenda-day-card">
+          <h4>MIÉRCOLES</h4>
+          <ul>
+            <li><span>14 a 20 hs</span> Básquet / Vóley <strong>(Cancha 1 y 2)</strong></li>
+          </ul>
+        </div>
+        <div class="agenda-day-card">
+          <h4>JUEVES</h4>
+          <ul>
+            <li><span>14 a 20 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+          </ul>
+        </div>
+        <div class="agenda-day-card">
+          <h4>VIERNES</h4>
+          <ul>
+            <li><span>14 a 20 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+            <li><span>22 a 23 hs</span> Básquet / Vóley <strong>(Cancha 2)</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="agenda-footer-note">
+        <span>💡 Valor general de turnos libres en grilla: <strong>$40.000</strong></span>
       </div>
     </section>
 
-    <!-- Módulo de Reserva Interactiva -->
-    <section class="section-block reservation-card">
+    <!-- Disciplinas e Instalaciones -->
+    <section class="section-block" id="instalaciones">
       <div class="section-title">
-        <h3>SISTEMA DE RESERVAS ONLINE 📅</h3>
-        <p>Completá los datos de tu turno para coordinar de forma directa.</p>
+        <h3>DISCIPLINAS Y ESTÁNDARES 🏆</h3>
+        <p>Infraestructura superior preparada para torneos oficiales y entrenamientos de elite.</p>
+      </div>
+
+      <div class="sports-grid" id="sports-grid-container">
+        <!-- Generado desde JS -->
+      </div>
+    </section>
+
+    <!-- Módulo de Reserva Interactiva VIP -->
+    <section class="section-block reservation-card" id="reservas">
+      <div class="section-title">
+        <h3>SISTEMA DE RESERVAS EJECUTIVO 📲</h3>
+        <p>Completá los datos requeridos para gestionar tu espacio institucionalmente.</p>
       </div>
 
       <form id="reservation-form" class="res-form" onsubmit="generateReservation(event)">
         <div class="form-grid">
           <div class="form-group">
-            <label for="res-sport">Disciplina *</label>
+            <label for="res-sport">Disciplina Deportiva *</label>
             <select id="res-sport" required>
               <option value="Futsal Profesional">Futsal Profesional ⚽</option>
               <option value="Básquet Oficial">Básquet Oficial 🏀</option>
@@ -110,10 +161,20 @@
           </div>
 
           <div class="form-group">
-            <label for="res-modality">Modalidad / Tarifa *</label>
+            <label for="res-court">Cancha / Espacio *</label>
+            <select id="res-court" required>
+              <option value="Cancha Principal / Completa">Cancha Principal / Completa</option>
+              <option value="Cancha 1">Cancha 1</option>
+              <option value="Cancha 2">Cancha 2</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-modality">Modalidad de Tarifa *</label>
             <select id="res-modality" required>
               <option value="Gimnasio Completo ($80.000)">Gimnasio Completo - $80.000</option>
               <option value="Gimnasio Parcial ($40.000)">Gimnasio Parcial - $40.000</option>
+              <option value="Turno Libre Agenda ($40.000)">Turno Libre Agenda - $40.000</option>
             </select>
           </div>
 
@@ -123,9 +184,9 @@
           </div>
 
           <div class="form-group">
-            <label for="res-time">Horario Preferido *</label>
+            <label for="res-time">Horario Solicitado *</label>
             <select id="res-time" required>
-              <option value="14:00 a 18:00 hs">14:00 a 18:00 hs (Turno Libre)</option>
+              <option value="14:00 a 18:00 hs">14:00 a 18:00 hs</option>
               <option value="18:00 a 19:30 hs">18:00 a 19:30 hs</option>
               <option value="19:30 a 21:00 hs">19:30 a 21:00 hs</option>
               <option value="21:00 a 22:30 hs">21:00 a 22:30 hs</option>
@@ -133,57 +194,72 @@
             </select>
           </div>
 
-          <div class="form-group full-width">
+          <div class="form-group">
             <label for="res-name">Nombre y Apellido (Responsable) *</label>
-            <input type="text" id="res-name" placeholder="Ej: Juan Pérez" required>
+            <input type="text" id="res-name" placeholder="Ej: Lic. Martín Gómez" required>
           </div>
         </div>
 
-        <button type="submit" class="btn-reserve-submit">SOLICITAR TURNO POR WHATSAPP 📱</button>
+        <button type="submit" class="btn-reserve-submit">GENERAR SOLICITUD POR WHATSAPP ⚡</button>
       </form>
     </section>
 
-    <!-- Especificaciones Técnicas del Complejo -->
+    <!-- Torneos y Competencias Relámpago -->
+    <section class="section-block tournaments-section">
+      <div class="section-title">
+        <h3>LIGAS Y COPAS RELÁMPAGO 🏅</h3>
+        <p>Espacios competitivos organizados para poner a prueba el nivel de tu equipo.</p>
+      </div>
+      <div class="tournament-banner">
+        <div class="tournament-info">
+          <h4>PRÓXIMO TORNEO ABIERTO // COPA INAUGURACIÓN</h4>
+          <p>Inscribí a tu equipo en Futsal o Básquet. Cupos limitados, cobertura fotográfica y premios en efectivo.</p>
+        </div>
+        <a href="https://wa.me/5493436131681?text=¡Hola!%20Quiero%20consultar%20sobre%20la%20inscripción%20a%20los%20torneos%20en%20Arena%20Paraná%20Sport%20🏆" target="_blank" class="btn-tournament">CONSULTAR INSCRIPCIÓN 📲</a>
+      </div>
+    </section>
+
+    <!-- Especificaciones de Arquitectura y Confort -->
     <section class="tech-specs-section">
       <div class="section-title">
-        <h3>INFRAESTRUCTURA PREMIUM 💡</h3>
-        <p>Canchas, iluminación, tribunas, piso deportivo y espacios comunes diseñados sin concesiones.</p>
+        <h3>ARQUITECTURA Y TERMINACIONES DE ELITE 🏛️</h3>
+        <p>Cada rincón del complejo fue desarrollado para brindar confort absoluto a jugadores y espectadores.</p>
       </div>
 
       <div class="specs-grid">
         <div class="spec-card">
           <span>💡</span>
-          <h4>Iluminación LED Pro</h4>
-          <p>Sistema lumínico avanzado sin sombras ni reflejos molestos para partidos nocturnos perfectos.</p>
+          <h4>Iluminación Hexagonal LED</h4>
+          <p>Sistemas lumínicos modernos de alta potencia distribuidos estratégicamente para cero fatiga visual.</p>
         </div>
         <div class="spec-card">
           <span>🏀</span>
-          <h4>Piso Deportivo de Alta Gama</h4>
-          <p>Superficie flotante profesional con óptima amortiguación y demarcación oficial.</p>
+          <h4>Piso Deportivo Profesional</h4>
+          <p>Superficie de madera de ingeniería con alto coeficiente de fricción y absorción de impactos.</p>
         </div>
         <div class="spec-card">
           <span>🚿</span>
-          <h4>Vestuarios y Tribunas</h4>
-          <p>Espacios sanitarios de categoría, duchas modernas y gradas para el público.</p>
+          <h4>Vestuarios & Espacios VIP</h4>
+          <p>Baterías sanitarias completas, duchas de primer nivel y áreas de descanso con asientos personalizados.</p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer Profesional -->
-  <footer class="main-footer">
+  <!-- Footer Institucional -->
+  <main-footer class="main-footer">
     <div class="footer-content">
       <div class="footer-col">
         <h3>ARENA PARANÁ SPORT</h3>
-        <p>El complejo deportivo de referencia en Entre Ríos.</p>
-        <small>📍 Juan Morath 10 (Esq. Almafuerte), Paraná</small>
+        <p>El nuevo estándar en infraestructura y gestión deportiva de la región.</p>
+        <small>📍 Juan Morath 10 (Esq. Almafuerte), Paraná, Entre Ríos</small>
       </div>
       <div class="footer-col text-right">
-        <p>Desarrollo institucional &middot; Todos los derechos reservados</p>
+        <p>Plataforma de Gestión Oficial &middot; Todos los derechos reservados</p>
       </div>
     </div>
-  </footer>
+  </main-footer>
 
   <script src="app.js"></script>
 </body>
