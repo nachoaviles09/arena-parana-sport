@@ -35,7 +35,7 @@ function renderSports() {
       </div>
       <div class="sport-meta">
         <span class="sport-price">${sport.price}</span>
-        <button class="btn-select-sport" onclick="selectSportFromCard('${sport.name}')">Reservar</button>
+        <button class="btn-sport" onclick="selectSportFromCard('${sport.name}')">Reservar</button>
       </div>
     </div>
   `).join('');
@@ -45,7 +45,7 @@ function selectSportFromCard(sportName) {
   const select = document.getElementById('res-sport');
   if (select) {
     select.value = sportName;
-    document.querySelector('.reservation-card').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.reservation-section').scrollIntoView({ behavior: 'smooth' });
   }
 }
 
@@ -53,7 +53,7 @@ function selectModality(modalityName) {
   const selectMod = document.getElementById('res-modality');
   if (selectMod) {
     selectMod.value = modalityName;
-    document.querySelector('.reservation-card').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.reservation-section').scrollIntoView({ behavior: 'smooth' });
   }
 }
 
