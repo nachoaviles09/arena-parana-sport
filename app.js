@@ -81,7 +81,7 @@ function generateReservation(event) {
     time: time
   };
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyTT2bsTq2pl1Yw9mh7FPEueK1laCLkMi1FBM4QV2qMKlB-YfWyQJF0tV47Tc0ICrNj/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx1CtXd3fmVh5ICSp8JDS6WiEJmQnQx5_kbJKpLSUnZFPBiZLzA2FC0fMDb4y262TRO/exec';
 
   // Enviar a Google Sheets con encabezado compatible
   fetch(scriptURL, {
