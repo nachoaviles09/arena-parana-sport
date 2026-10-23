@@ -8,8 +8,12 @@
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/jpeg" href="813021210_18113448151858751_1309644951589697854_n.jpg">
 
-  <!-- Forzamos la actualización del CSS para evitar errores de caché -->
-  <link rel="stylesheet" href="styles.css?v=3">
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -40,7 +44,7 @@
       <p>Canchas, iluminación, tribunas, piso deportivo y terminaciones pensadas para que cada partido sea una experiencia de elite.</p>
       <div class="hero-buttons">
         <a href="#reservas" class="btn-main">RESERVAR ONLINE</a>
-        <a href="#multimedia" class="btn-sub">VER RECORRIDO 🎥</a>
+        <a href="#multimedia" class="btn-sub">VER RECORRIDO</a>
       </div>
     </div>
   </section>
@@ -65,11 +69,10 @@
       </div>
 
       <div class="grid-2">
-        <div class="card">
+        <div class="card glass-effect">
           <div class="video-box">
             <video autoplay muted loop playsinline preload="auto">
               <source src="igexport-Dd3uJvZRFdY.mp4" type="video/mp4">
-              Tu navegador no soporta la reproducción de video.
             </video>
           </div>
           <div class="card-body">
@@ -78,11 +81,10 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card glass-effect">
           <div class="video-box">
             <video autoplay muted loop playsinline preload="auto">
               <source src="igexport-Dd9oF_IStvF.mp4" type="video/mp4">
-              Tu navegador no soporta la reproducción de video.
             </video>
           </div>
           <div class="card-body">
@@ -102,7 +104,7 @@
       </div>
 
       <div class="grid-2">
-        <div class="price-card highlight">
+        <div class="price-card highlight glass-effect">
           <span class="price-badge">MÁS ELEGIDO</span>
           <div>
             <h4>Gimnasio Completo</h4>
@@ -110,11 +112,11 @@
           </div>
           <div class="price-footer">
             <div class="price">$80.000 <span>/ turno</span></div>
-            <button class="btn-card" onclick="selectModality('Gimnasio Completo ($80.000)')">Seleccionar Completo</button>
+            <button class="btn-card highlight-btn" onclick="selectModality('Gimnasio Completo ($80.000)')">Seleccionar Completo</button>
           </div>
         </div>
 
-        <div class="price-card">
+        <div class="price-card glass-effect">
           <div>
             <h4>Gimnasio Parcial</h4>
             <p>Modalidad específica disponible para prácticas y partidos de Básquet y Vóley.</p>
@@ -136,7 +138,7 @@
       </div>
 
       <div class="agenda-grid">
-        <div class="agenda-card">
+        <div class="agenda-card glass-effect">
           <h4>LUNES</h4>
           <ul>
             <li><span>14 a 18 hs</span> Cancha 1</li>
@@ -145,25 +147,25 @@
             <li><span>22 a 23 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card">
+        <div class="agenda-card glass-effect">
           <h4>MARTES</h4>
           <ul>
             <li><span>14 a 19 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card">
+        <div class="agenda-card glass-effect">
           <h4>MIÉRCOLES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 1 y 2</li>
           </ul>
         </div>
-        <div class="agenda-card">
+        <div class="agenda-card glass-effect">
           <h4>JUEVES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 2</li>
           </ul>
         </div>
-        <div class="agenda-card">
+        <div class="agenda-card glass-effect">
           <h4>VIERNES</h4>
           <ul>
             <li><span>14 a 20 hs</span> Cancha 2</li>
@@ -187,7 +189,7 @@
     </section>
 
     <!-- SECCIÓN: Reservas -->
-    <section class="section reservation-section" id="reservas">
+    <section class="section reservation-section glass-effect" id="reservas">
       <div class="section-title">
         <span class="tag">GESTIÓN ONLINE</span>
         <h3>SISTEMA DE RESERVAS EJECUTIVO</h3>
