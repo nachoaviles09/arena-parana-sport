@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Arena Paraná Sport | Complejo Deportivo de Alta Gama 🏀⚽🏐</title>
 
+  <!-- Favicon / Logo en pestaña -->
+  <link rel="icon" type="image/jpeg" href="813021210_18113448151858751_1309644951589697854_n.jpg">
+
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Arena Paraná Sport | Complejo Deportivo de Alta Gama">
@@ -15,12 +18,15 @@
 </head>
 <body>
 
-  <!-- Header Ejecutivo -->
+  <!-- Header Ejecutivo con Logo Real -->
   <header class="main-header">
     <div class="header-container">
       <div class="brand-box">
-        <span class="brand-tag">PARANÁ // ENTRE RÍOS</span>
-        <h1>ARENA PARANÁ <span>SPORT</span></h1>
+        <img src="813021210_18113448151858751_1309644951589697854_n.jpg" alt="Logo Arena Paraná Sport" class="header-logo">
+        <div>
+          <span class="brand-tag">PARANÁ // ENTRE RÍOS</span>
+          <h1>ARENA PARANÁ <span>SPORT</span></h1>
+        </div>
       </div>
       <div class="header-actions-top">
         <a href="#agenda" class="header-link-agenda">📅 Agenda Semanal</a>
@@ -40,7 +46,7 @@
         <p>Canchas profesionales, iluminación LED sin reflejos, tribunas, piso deportivo de alta gama y espacios comunes diseñados sin concesiones.</p>
         <div class="hero-actions">
           <a href="#reservas" class="btn-primary">RESERVAR TURNO ⚡</a>
-          <a href="#agenda" class="btn-secondary">VER AGENDA LIBRE 📅</a>
+          <a href="#multimedia" class="btn-secondary">VER INSTALACIONES 🎥</a>
         </div>
       </div>
     </div>
@@ -57,6 +63,38 @@
 
   <main class="main-container">
     
+    <!-- Sección de Videos Institucionales (Multimedia Real) -->
+    <section class="section-block" id="multimedia">
+      <div class="section-title">
+        <h3>🎥 RECORRIDO POR EL COMPLEJO</h3>
+        <p>Conocé el nivel de infraestructura, vestuarios y cancha principal de Arena Paraná Sport.</p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls autoplay muted loop playsinline class="complex-video">
+            <source src="igexport-Dd3uJvZRFdY.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <div class="video-caption">
+            <h4>Vestuarios y Sanitarios VIP</h4>
+            <p>Terminaciones de primera, duchas modernas y espacios diseñados para el confort.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls autoplay muted loop playsinline class="complex-video">
+            <source src="igexport-Dd9oF_IStvF.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <div class="video-caption">
+            <h4>Cancha Principal y Tribunas</h4>
+            <p>Piso flotante profesional, iluminación LED avanzada y asientos personalizados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Sección de Precios de Lanzamiento -->
     <section class="section-block" id="precios">
       <div class="section-title">
@@ -82,7 +120,7 @@
       </div>
     </section>
 
-    <!-- Módulo de Agenda de Turnos Libres (Basado en la cartelera oficial) -->
+    <!-- Módulo de Agenda de Turnos Libres -->
     <section class="section-block" id="agenda">
       <div class="section-title">
         <h3>📅 AGENDA DE TURNOS LIBRES // PRÓXIMA SEMANA</h3>
@@ -219,36 +257,10 @@
       </div>
     </section>
 
-    <!-- Especificaciones de Arquitectura y Confort -->
-    <section class="tech-specs-section">
-      <div class="section-title">
-        <h3>ARQUITECTURA Y TERMINACIONES DE ELITE 🏛️</h3>
-        <p>Cada rincón del complejo fue desarrollado para brindar confort absoluto a jugadores y espectadores.</p>
-      </div>
-
-      <div class="specs-grid">
-        <div class="spec-card">
-          <span>💡</span>
-          <h4>Iluminación Hexagonal LED</h4>
-          <p>Sistemas lumínicos modernos de alta potencia distribuidos estratégicamente para cero fatiga visual.</p>
-        </div>
-        <div class="spec-card">
-          <span>🏀</span>
-          <h4>Piso Deportivo Profesional</h4>
-          <p>Superficie de madera de ingeniería con alto coeficiente de fricción y absorción de impactos.</p>
-        </div>
-        <div class="spec-card">
-          <span>🚿</span>
-          <h4>Vestuarios & Espacios VIP</h4>
-          <p>Baterías sanitarias completas, duchas de primer nivel y áreas de descanso con asientos personalizados.</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer Institucional -->
-  <main-footer class="main-footer">
+  <footer class="main-footer">
     <div class="footer-content">
       <div class="footer-col">
         <h3>ARENA PARANÁ SPORT</h3>
@@ -259,7 +271,7 @@
         <p>Plataforma de Gestión Oficial &middot; Todos los derechos reservados</p>
       </div>
     </div>
-  </main-footer>
+  </footer>
 
   <script src="app.js"></script>
 </body>

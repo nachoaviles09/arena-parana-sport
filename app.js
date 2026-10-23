@@ -72,7 +72,6 @@ function generateReservation(event) {
     return;
   }
 
-  // Formatear mensaje para WhatsApp institucional
   let message = `🏟️ *SOLICITUD DE TURNO - ARENA PARANÁ SPORT*\n`;
   message += `📍 _Ubicación: Juan Morath 10, Paraná_\n\n`;
   message += `⚽ *Disciplina:* ${sport}\n`;
