@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Arena Paraná Sport | Complejo Deportivo Profesional 🏀⚽🏐</title>
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arena Paraná Sport | Complejo Deportivo Profesional">
+  <meta property="og:description" content="Instalaciones de primer nivel para Básquet, Vóley y Futsal. Reservá tu turno online. Juan Morath 10, Paraná.">
+  <meta property="og:site_name" content="Arena Paraná Sport">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Institucional -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="brand-box">
+        <span class="brand-tag">PARANÁ // ENTRE RÍOS</span>
+        <h1>ARENA PARANÁ <span>SPORT</span></h1>
+      </div>
+      <div class="header-badge">
+        <span class="live-dot"></span> Instalaciones Habilitadas
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <span class="hero-badge">INFRAESTRUCTURA DE ÚLTIMA GENERACIÓN</span>
+        <h2>EL NUEVO ESTÁNDAR DEPORTIVO EN LA CIUDAD</h2>
+        <p>Canchas, iluminación, tribunas, piso deportivo, espacios comunes y terminaciones pensadas para que cada experiencia esté a la altura.</p>
+        <div class="hero-actions">
+          <a href="#reservas" class="btn-primary">RESERVAR TURNO ⚡</a>
+          <a href="#precios" class="btn-secondary">VER TARIFAS 🔥</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Ubicación e Info -->
+  <section class="info-bar">
+    <div class="info-track">
+      <div class="info-item">📍 <strong>Ubicación:</strong> Juan Morath 10 (esq. Almafuerte), Paraná</div>
+      <div class="info-item">🕒 <strong>Horarios:</strong> Lun a Dom de 08:00 a 00:00 hs</div>
+      <div class="info-item">📞 <strong>Contacto:</strong> Atención Directa por WhatsApp</div>
+    </div>
+  </section>
+
+  <main class="main-container" id="reservas">
+    
+    <!-- Sección de Precios de Lanzamiento -->
+    <section class="section-block" id="precios">
+      <div class="section-title">
+        <h3>🔥 PRECIOS DE LANZAMIENTO</h3>
+        <p>Elegí la modalidad que mejor se adapte a tu equipo para Futsal, Básquet o Vóley.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card featured">
+          <div class="pricing-tag">MÁS POPULAR</div>
+          <h4>Gimnasio Completo</h4>
+          <p>Elegí una de las tres disciplinas (Futsal, Básquet o Vóley) con uso total del complejo.</p>
+          <div class="price-value">$80.000 <span>el turno</span></div>
+          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Completo ($80.000)')">Elegir Completo</button>
+        </div>
+
+        <div class="pricing-card">
+          <h4>Gimnasio Parcial</h4>
+          <p>Disponible para prácticas o partidos de Básquet y Vóley.</p>
+          <div class="price-value">$40.000 <span>el turno</span></div>
+          <button class="btn-select-pricing" onclick="selectModality('Gimnasio Parcial ($40.000)')">Elegir Parcial</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Disciplinas / Instalaciones -->
+    <section class="section-block" id="instalaciones">
+      <div class="section-title">
+        <h3>DISCIPLINAS Y CANCHAS 🏆</h3>
+        <p>Instalaciones de máxima categoría preparadas para competencias y entrenamientos.</p>
+      </div>
+
+      <div class="sports-grid" id="sports-grid-container">
+        <!-- Generado dinámicamente desde JS -->
+      </div>
+    </section>
+
+    <!-- Módulo de Reserva Interactiva -->
+    <section class="section-block reservation-card">
+      <div class="section-title">
+        <h3>SISTEMA DE RESERVAS ONLINE 📅</h3>
+        <p>Completá los datos de tu turno para coordinar de forma directa.</p>
+      </div>
+
+      <form id="reservation-form" class="res-form" onsubmit="generateReservation(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="res-sport">Disciplina *</label>
+            <select id="res-sport" required>
+              <option value="Futsal Profesional">Futsal Profesional ⚽</option>
+              <option value="Básquet Oficial">Básquet Oficial 🏀</option>
+              <option value="Vóley Reglamentario">Vóley Reglamentario 🏐</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-modality">Modalidad / Tarifa *</label>
+            <select id="res-modality" required>
+              <option value="Gimnasio Completo ($80.000)">Gimnasio Completo - $80.000</option>
+              <option value="Gimnasio Parcial ($40.000)">Gimnasio Parcial - $40.000</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-date">Fecha del Turno *</label>
+            <input type="date" id="res-date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="res-time">Horario Preferido *</label>
+            <select id="res-time" required>
+              <option value="14:00 a 18:00 hs">14:00 a 18:00 hs (Turno Libre)</option>
+              <option value="18:00 a 19:30 hs">18:00 a 19:30 hs</option>
+              <option value="19:30 a 21:00 hs">19:30 a 21:00 hs</option>
+              <option value="21:00 a 22:30 hs">21:00 a 22:30 hs</option>
+              <option value="22:00 a 23:00 hs">22:00 a 23:00 hs (Nocturno)</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="res-name">Nombre y Apellido (Responsable) *</label>
+            <input type="text" id="res-name" placeholder="Ej: Juan Pérez" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-reserve-submit">SOLICITAR TURNO POR WHATSAPP 📱</button>
+      </form>
+    </section>
+
+    <!-- Especificaciones Técnicas del Complejo -->
+    <section class="tech-specs-section">
+      <div class="section-title">
+        <h3>INFRAESTRUCTURA PREMIUM 💡</h3>
+        <p>Canchas, iluminación, tribunas, piso deportivo y espacios comunes diseñados sin concesiones.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <span>💡</span>
+          <h4>Iluminación LED Pro</h4>
+          <p>Sistema lumínico avanzado sin sombras ni reflejos molestos para partidos nocturnos perfectos.</p>
+        </div>
+        <div class="spec-card">
+          <span>🏀</span>
+          <h4>Piso Deportivo de Alta Gama</h4>
+          <p>Superficie flotante profesional con óptima amortiguación y demarcación oficial.</p>
+        </div>
+        <div class="spec-card">
+          <span>🚿</span>
+          <h4>Vestuarios y Tribunas</h4>
+          <p>Espacios sanitarios de categoría, duchas modernas y gradas para el público.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Profesional -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>ARENA PARANÁ SPORT</h3>
+        <p>El complejo deportivo de referencia en Entre Ríos.</p>
+        <small>📍 Juan Morath 10 (Esq. Almafuerte), Paraná</small>
+      </div>
+      <div class="footer-col text-right">
+        <p>Desarrollo institucional &middot; Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
